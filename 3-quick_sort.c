@@ -5,6 +5,20 @@ void recursive_lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
 /**
+ * swap_values - Swaps two integers in array.
+ * @x: First integer to swap.
+ * @z: Second integer to swap.
+ */
+void swap_values(int *x, int *z)
+{
+	int tmp;
+
+	tmp = *x;
+	*x = *z;
+	*z = tmp;
+}
+
+/**
  * partition - Order a subset of an array of integers according to
  *                    the partition scheme (last element as pivot).
  * @array: The array of integers.

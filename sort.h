@@ -4,19 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * swap_values - Swaps two integers in array.
- * @x: First integer to swap.
- * @z: Second integer to swap.
- */
-void swap_values(int *x, int *z)
-{
-	int tmp;
-
-	tmp = *x;
-	*x = *z;
-	*z = tmp;
-}
 
 /* Comparison direction macros for bitonic sort */
 #define UP 0
@@ -46,6 +33,21 @@ typedef struct listint_s
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
+
+
+/**
+ * swap_values - Swaps two integers in array.
+ * @x: First integer to swap.
+ * @z: Second integer to swap.
+ */
+void swap_values(int *x, int *z)
+{
+	int tmp;
+
+	tmp = *x;
+	*x = *z;
+	*z = tmp;
+}
 
 /* Printing helper functions */
 void print_array(const int *array, size_t size);

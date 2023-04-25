@@ -43,19 +43,19 @@ int len_list(listint_t *head)
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current_node, *sorted_node, *next_node;
+listint_t *current_node, *sorted_node, *next_node;
 
-	if (list == NULL || *list == NULL || (*list)->next == NULL)
-		return;
+if (list == NULL || *list == NULL || (*list)->next == NULL)
+return;
 
-	for (current_node = (*list)->next; current_node != NULL; current_node = next_node)
-	{
-		next_node = current_node->next;
-		sorted_node = current_node->prev;
-		while (sorted_node != NULL && current_node->n > sorted_node->n)
-		{
-			swap_nodes(list, &sorted_node, current_node);
-			print_list((const listint_t *)*list);
-		}
-	}
+for (current_node = (*list)->next; current_n != NULL; current_node = next_node)
+{
+next_node = current_n->next;
+sorted_node = current_n->prev;
+while (sorted_node != NULL && current_n->n > sorted_node->n)
+{
+swap_nodes(list, &sorted_node, current_n);
+print_list((const listint_t *)*list);
+}
+}
 }

@@ -4,9 +4,9 @@
 
 /**
  * swap_nodes - Swaps two nodes in a listint_t doubly-linked list.
- * @list_head: Pointer to head of doubly-linked list.
- * @first_node:Pointer to first node to swap.
- * @second_node: Second node to swap.
+ * @list_hd: Pointer to head of doubly-linked list.
+ * @first_n:Pointer to first node to swap.
+ * @second_n: Second node to swap.
  */
 void swap_nodes(listint_t **list_hd, listint_t **first_n, listint_t *second_n)
 {

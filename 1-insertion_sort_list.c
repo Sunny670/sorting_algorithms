@@ -23,6 +23,13 @@ void swap_nodes(listint_t **list_hd, listint_t **first_n, listint_t *second_n)
 	*first_n = second_n->prev;
 }
 
+/**
+ * len_list - computes length of singly linked list
+ * @head: pointer to head node of list
+ *
+ * Return:length of the list
+ */
+
 int len_list(listint_t *head)
 {
 	int len = 0;

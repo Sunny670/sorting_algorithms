@@ -8,7 +8,7 @@
  * @first_node:Pointer to first node to swap.
  * @second_node: Second node to swap.
  */
-void swap_nodes(listint_t **list_head, listint_t **first_n, listint_t *second_n)
+void swap_nodes(listint_t **list_hd, listint_t **first_n, listint_t *second_n)
 {
 	(*first_n)->next = second_n->next;
 	if (second_n->next != NULL)
@@ -18,7 +18,7 @@ void swap_nodes(listint_t **list_head, listint_t **first_n, listint_t *second_n)
 	if ((*first_n)->prev != NULL)
 		(*first_n)->prev->next = second_n;
 	else
-		*list_head = second_n;
+		*list_hd = second_n;
 	(*first_n)->prev = second_n;
 	*first_n = second_n->prev;
 }
@@ -43,19 +43,19 @@ int len_list(listint_t *head)
  */
 void insertion_sort_list(listint_t **list)
 {
-listint_t *current_node, *sorted_node, *next_node;
+	listint_t *current_n, *sorted_n, *next_node;
 
-if (list == NULL || *list == NULL || (*list)->next == NULL)
-return;
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
 
-for (current_node = (*list)->next; current_n != NULL; current_node = next_node)
-{
-next_node = current_n->next;
-sorted_node = current_n->prev;
-while (sorted_node != NULL && current_n->n > sorted_node->n)
-{
-swap_nodes(list, &sorted_node, current_n);
-print_list((const listint_t *)*list);
-}
-}
+	for (current_n = (*list)->next; current_n != NULL; current_n = next_node)
+	{
+		next_node = current_n->next;
+		sorted_n = current_n->prev;
+		while (sorted_n != NULL && current_n->n < sorted_n->n)
+		{
+			swap_nodes(list, &sorted_n, current_n);
+			print_list((const listint_t *)*list);
+		}
+	}
 }
